@@ -1,0 +1,7 @@
+Word2vec
+Text2vec
+NLP
+Stanford bib
+LSM
+Dérivée LSTM -DAN
+Données séquentielles

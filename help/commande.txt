@@ -1,0 +1,2 @@
+soffice --headless --convert-to pdf *.pptx
+doc2pdf Eric-goffin-CV-Man.docx
