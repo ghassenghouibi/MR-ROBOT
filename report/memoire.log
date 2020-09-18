@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2020.4.27)  17 JUL 2020 12:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2020.4.27)  4 SEP 2020 20:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -774,7 +774,11 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \float@box=\box47
 \@float@everytoks=\toks43
 \@floatcapt=\box48
-) (./memoire.aux)
+) (./memoire.aux
+
+LaTeX Warning: Label `CSR' multiply defined.
+
+)
 \openout1 = `memoire.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
@@ -793,8 +797,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 38.
 LaTeX Font Info:    ... okay on input line 38.
 \AtBeginShipoutBox=\box49
 Package hyperref Info: Link coloring OFF on input line 38.
-
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
@@ -859,7 +862,7 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
 ABD: EveryShipout initializing macros
 \c@lstlisting=\count191
-<paris8.png, id=19, 317.185pt x 159.59625pt>
+<paris8.png, id=15, 317.185pt x 159.59625pt>
 File: paris8.png Graphic file (type png)
 <use paris8.png>
 Package pdftex.def Info: paris8.png  used on input line 42.
@@ -892,102 +895,118 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.80 	\tableofcontents
-                       [1
+l.80 	\chapter
+              *{Problèmatique} [1
+
+] [2
 
 ] (./memoire.toc)
 \tf@toc=\write7
 \openout7 = `memoire.toc'.
 
- [2
+ [3
 
 ]
 Chapitre 1.
-[3
+[4
 
 ]
 <CV.png, id=54, 963.6pt x 1027.84pt>
 File: CV.png Graphic file (type png)
 <use CV.png>
-Package pdftex.def Info: CV.png  used on input line 95.
-(pdftex.def)             Requested size: 199.99474pt x 149.99751pt.
+Package pdftex.def Info: CV.png  used on input line 108.
+(pdftex.def)             Requested size: 149.9887pt x 149.99751pt.
 <CV2.png, id=56, 963.6pt x 1027.84pt>
 File: CV2.png Graphic file (type png)
 <use CV2.png>
-Package pdftex.def Info: CV2.png  used on input line 96.
-(pdftex.def)             Requested size: 199.99474pt x 149.99751pt.
-
-Overfull \hbox (42.4228pt too wide) in paragraph at lines 95--97
-[][] []
- []
-
-<algo.png, id=57, 1610.015pt x 970.62625pt>
-File: algo.png Graphic file (type png)
-<use algo.png>
-Package pdftex.def Info: algo.png  used on input line 108.
-(pdftex.def)             Requested size: 349.97891pt x 200.00159pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 100--131
-
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[4pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1}
-) has been already used, duplicate ignored
+Package pdftex.def Info: CV2.png  used on input line 109.
+(pdftex.def)             Requested size: 149.9887pt x 149.99751pt.
+ [5pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1
+}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.131 	
-        <./CV.png> <./CV2.png>] [5pdfTeX warning (ext4): destination with the s
-ame identifier (name{figure.1.2}) has been already used, duplicate ignored
+l.122 	
+        <./CV.png> <./CV2.png>]
+<score.png, id=67, 718.685pt x 368.37625pt>
+File: score.png Graphic file (type png)
+<use score.png>
+Package pdftex.def Info: score.png  used on input line 126.
+(pdftex.def)             Requested size: 350.00935pt x 169.99474pt.
+ [6pdfTeX warning (ext4): destination with the same identifier (name{figure.1.2
+}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.132 	\chapter
-               {État de l'art} <./algo.png>]
+               {État de l'art} <./score.png>]
 Chapitre 2.
-[6
 
-]
-Chapitre 3.
+Overfull \hbox (4.41098pt too wide) in paragraph at lines 133--138
+\OT1/cmr/m/n/10.95 trois types de texte \OT1/cmr/m/it/10.95 simple \OT1/cmr/m/n
+/10.95 qui repr^^Sesente un texte court, \OT1/cmr/m/it/10.95 Key-Va-lue \OT1/cm
+r/m/n/10.95 repr^^Sesenter
+ []
+
+
+Overfull \hbox (33.65793pt too wide) in paragraph at lines 133--138
+\OT1/cmr/m/n/10.95 trans-ver-sales, Les on-to-lo-gies par exemple : Comp^^Seten
+ces $\OMS/cmsy/m/n/10.95 2$ $[]$\OT1/cmr/m/n/10.95 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 139--142
+
+ []
+
 [7
 
-] [8
+] [8] [9
 
-]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 153.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 153.
+pdfTeX warning (ext4): destination with the same identifier (name{cite.CSR}) ha
+s been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.220 \end{document}
+                    ]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 220.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 220.
  (./memoire.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 153.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 153.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 220.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 220.
 Package rerunfilecheck Info: File `memoire.out' has not changed.
-(rerunfilecheck)             Checksum: D420CE51EE9A4ECE66CFC7EFCB6559CE;143.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 153.
+(rerunfilecheck)             Checksum: 2E58A4B2C03365384FAAFECB004A823E;98.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 220.
  ) 
 Here is how much of TeX's memory you used:
- 22087 strings out of 494532
- 399825 string characters out of 6176185
+ 22106 strings out of 494532
+ 400004 string characters out of 6176185
  494860 words of memory out of 5000000
- 25316 multiletter control sequences out of 15000+600000
+ 25326 multiletter control sequences out of 15000+600000
  12528 words of font info for 46 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  55i,7n,65p,1009b,431s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmsl10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmtt10.pfb>
-Output written on memoire.pdf (9 pages, 1432867 bytes).
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmsl10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10
+.pfb>
+Output written on memoire.pdf (10 pages, 1353453 bytes).
 PDF statistics:
- 129 PDF objects out of 1000 (max. 8388607)
- 99 compressed objects within 1 object stream
- 20 named destinations out of 1000 (max. 500000)
- 57 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 154 PDF objects out of 1000 (max. 8388607)
+ 120 compressed objects within 2 object streams
+ 29 named destinations out of 1000 (max. 500000)
+ 49 words of extra memory for PDF output out of 10000 (max. 10000000)
 

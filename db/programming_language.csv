@@ -1,9 +1,3 @@
-Name
-"A+
-A++
-A# .NET (en)
-A# (Axiom) (en)
-A-0 System
 ABAL
 ABAL++
 ABAP
@@ -55,8 +49,8 @@ AutoIt
 Averest
 awk
 axe parser
-Axum (programming language) (en)"
-"B
+Axum
+B
 BASIC
 BASICA
 Basic Nspire
@@ -65,7 +59,7 @@ DarkBasic
 FreeBasic
 GW-Basic
 Microsoft Small Basic
-PowerBasic (en)
+PowerBasic
 PureBasic
 QuickBasic
 SmallBasic
@@ -74,8 +68,8 @@ True Basic
 Turbo Basic
 Visual Basic
 wxBasic
-Bash (Bourne-Again shell)
-Batch file (fichier bat)
+Bash
+Batch file
 bc
 BCPL
 BeanShell
@@ -99,7 +93,7 @@ BPEL
 Brainfuck
 BUGSYS
 BuildProfessional"
-"C
+C
 C--
 C++
 C++14
@@ -198,8 +192,8 @@ Dynace"
 "E
 Ease
 EASY
-Easytrieve Classic (en)
-Easytrieve Plus (en)
+Easytrieve Classic
+Easytrieve Plus
 eC (Ecere C)
 ECMAScript
 eDeveloper
@@ -221,8 +215,8 @@ Etoys
 Euclid
 Euler
 Euphoria
-CMS EXEC (en)
-EXEC 2 (en)
+CMS EXEC
+EXEC 2
 Extends"
 "F
 F#
@@ -319,10 +313,10 @@ Jako
 Jackson Structured Programming
 JAL
 Janus
-JASS (en)
+JASS
 Java
 JavaScript
-JCL (Job Control Langage)
+JCL
 JEAN
 Join Java
 JOSS
@@ -345,8 +339,8 @@ Korn shell (ksh)
 Kotlin
 KRC
 KRYPTON
-KUKA"
-"L
+KUKA
+L
 L# .NET
 LabVIEW
 Ladder (LD)
@@ -435,8 +429,8 @@ MSIL (CIL)
 MSL
 MSX BASIC
 MUMPS
-Mythryl"
-"N
+Mythryl
+N
 Napier88
 Natural
 NBC
@@ -462,8 +456,8 @@ NQC
 Nu
 NXC
 NXT-G
-Nyquist"
-"o:XML
+Nyquist
+o:XML
 Oak
 Oberon
 Object Lisp
@@ -486,8 +480,8 @@ Ork
 ORCA/Modula-2
 Orwell
 Oxygene
-Oz"
-"Panoramic
+Oz
+Panoramic
 PARI/GP
 Pascal - ISO 7185[5] et ISO 10206[6]
 P4
@@ -543,15 +537,15 @@ ProvideX
 Pure
 PureBasic
 Python"
-"Q
-Q# (en)
+Q
+Q#
 Qi
 QtScript
 QBasic
 QML
 QuakeC
-QPL"
-"R
+QPL
+R
 R++
 Rapira
 Ratfiv
@@ -572,8 +566,8 @@ RPL
 RSL
 RTL/2
 Ruby
-Rust"
-"S
+Rust
+S
 S2
 S3
 S-Lang
@@ -698,7 +692,7 @@ Visual FoxPro
 Visual Objects
 Vvvv"
 "Water
-WATFIV, WATFOR (en)
+,WATFIV,, WATFOR (en),
 WebQL
 Whitespace
 Winbatch

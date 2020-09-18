@@ -1,2 +1,9 @@
 /OfficeToPDF
 /help/*.png
+/__pycache__
+/db/
+/nlp_model/
+/report/
+/designer/
+/help/
+/modules/

@@ -1,0 +1,10 @@
+1# comparing obtained vector with job description
+
+3# scoring with doc2vec
+4# try'ing to save the model
+5# classification cv
+6# interface
+7# mémoire
+8# party !
+
+#!# testing doc2vec

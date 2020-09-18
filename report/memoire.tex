@@ -70,84 +70,151 @@ M1 MIASHS : Big Data et Fouille de données
 	\chapter*{Résumé}
 	%\markboth{\sc Résumé}{}
 	
-	La révolution digitale qu'on vit actuellement attire un nombre grand d'utilisateurs, qui se traduit un besoin important de spécialiste dans le domaine de l'informatique.\\
-	Ces dernières années l'apparition des \texttt{ESN\footnote{Une entreprise de services du numérique }} prend de plus d'en plus d'ampleur pour chercher le candidat idéal qui à permis la naissance à plusieurs plateforme comme LinkedIN en 2002. Le processus de rectrutement devient de plus en plus lourd surtout quand il s'agît de séléctionner un candidat parmis plusieurs de même les rectruteurs ne peuvent pas faire un tri dans des métadonnées.\\Le développement d'une interface qui automatise ce processus présente un véritable défi. En effet les recruteurs passent en moyenne 40 secondes pour lire un CV et 1 minute, 20 secondes pour décider si le candidat sera retenu dans la sélection.\\
+	La révolution digitale que nous vivons actuellement attire un nombre grand d'utilisateurs, qui se traduit un besoin important de spécialiste dans le domaine de l'informatique.\\
+	Ces dernières années l'apparition des \texttt{ESN\footnote{Une entreprise de services du numérique }} prend de plus d'en plus d'ampleur pour chercher le candidat idéal qui à permis la naissance à plusieurs plateforme comme LinkedIn en 2002. Le processus de rectrutement devient de plus en plus lourd surtout quand il s'agît de séléctionner un candidat parmis plusieurs de même les rectruteurs ne peuvent pas faire un tri dans des métadonnées.\\Le développement d'une interface qui automatise ce processus présente un véritable défi. En effet les recruteurs passent en moyenne 40 secondes pour lire un CV et 1 minute, 20 secondes pour décider si le candidat sera retenu dans la sélection.\\
 	Notre but est créer une interface qui pourrai nous présenter les meilleurs candidat par rapport à une fiche de poste. Les \texttt{NLP} présentent une solution pour résoudre ce problème, ces solutions donnent des résultats plutôt trés correcte, en revanche les modèles qui existent actuellement trouve une difficulté à détecter des compétences générales par rapport à des compétences techniques.\\
 	En mettant l'accent sur un modèle qui pourrai à la fois détecter les compétences générales intéressantes qui pourrait contribuer à la monté en compétence de candidat, aussi que donnée l'accès à des formations seraît un plus pour faire des économies au niveau de l'embauche aussi bien que donnée une chance équitable à chaque candidat.\\
 	Dans ce papier, notre but sera de créer une architecture qui pourrait prendre un nombre massive des données qui sera représenter par un banque de CV. Ensuite extraires les informations nécéssaire à partir d'une fiche de poste nous allons essayer de coincider cette dernière avec une sélection des meilleurs CV notamment un modèle basée sur les réseaux de neuronnes ainsi utiliser Word2vec, Text2Vec pour atteindre notre objectif.\\
 	\\
 	{\itshape	Mots-clefs : Word2vec, LSTM, Text2Vec, Naive Bayes, TF-IDF, NLP}
+	\chapter*{Problèmatique}
+	Les recrutements dans une entreprise sont un processus trés important pour le développement d'une société aussi bien qu'il permet de trouver la bonne formule et la bonne équipe à travailler ensemble.\\
+	En effet, le choix d'un candidats se fait sur plusieurs critères mais devient long dans certain grande entreprise vu le nombre de candidats, séléctionner à partir d'un centaine de profils devient coûteux, comment economiser le temps de fouille pour un profil ?
+	
+	Est-ce que un système de recommendation de candidats sera efficace sans vraiment oublié le côté humain dans le processus du recrutements ?\\
+	Les CV reçu sur un espace de recrutements sont nombreux ils peuvent se présenter sous plusieurs format (exemple: Docx,Doc,Pdf ...) et certain encodage (exemple: utf-8,utf-16 ...), comment procèder pour regouper ces fichiers sous un seul format ?\\
+	L'extraction d'information à partir d'un CV est une étape trés importante avant de procèder à mettre les CV en compétition, le défi sera de comprendre ces derniers est pouvoir les regrouper en sorte cluster.\\
+	Est ce que les systèmes de recommendation actuelles sont efficaces pour prendre un décision à la place de l'humain ?\\
+	L'interface proposer dans se papier pourrait faire des économies en terme de charge salariale et gagner du temps sur d'autres opérations comme signature des contrats ... etc\\
+	Dernièrement, la problèmatique pertiente est-ce que l'algorithme sera-t-il efficace pour remplacer les choix humains sans aide extérieur constante ?, comment peut on améliorer les résultats obtenu et alimenter notre base de données ?
+	
+	
+	
 	\tableofcontents
 	\newpage
 	
 	\chapter{Introduction}
 	
 	La dernière décennie à vu l'émergence d'internet, des nouveaux emplois ont vu le jour grâce à l'automatisation de plusieurs processus. Pour çelà plusieurs entreprise essayent de trouver les bons candidats à leur entreprise mais la mission devient trés difficile quand on parle des \texttt{ESN}.\\
-	L'apparition de plusieurs plateforme qui traitent notre curriculum vitæ pour prédire si on est le meilleur candidat pour un poste comme LinkedIn. Notre but c'est concevoir une interface qui permet de correspondre une fiche de poste à notre base de données de candidats.
+	L'apparition de plusieurs plateforme qui traitent notre curriculum vitæ pour prédire le meilleur candidat pour un poste comme LinkedIn. Notre but c'est concevoir une interface qui permet de correspondre une fiche de poste à notre base de données de candidats.
 	
 	Les avancées de recherche dans le domaine du \texttt{text-mining} ne peuvent que présenter une solution idéale pour ce genre de problème néanmoins, il faudrait d'abord comprendre le processus de recrutement et la selection d'un candidats par rapport à un autre. En effet la touche humaine ne peut pas être négliger pour choisir un candidats, plusieurs plateforme échoue dans plusieurs essai pour plusieurs raisons comme le format ou l'encodage.\\
 	Malgré plusieurs avancer mais jusqu'a l'heure actuelle aucune plateforme n'a réussi à détecter les compétences générales qui veut dire un candidat intéressant mais qui aura besoin d'une petite formation çelà présente beaucoup d'avantage pour l'entreprise au point de vu économique.\\
 	La conception d'une interface qui permet à la fois de trouver un curriculum vitæ idéale en prennant en compte tous les aspects techniques mais aussi les aspects humains et donner une chance à tous les candidats d'une manière équitable.
 	Vu le grand nombre de candidatures sur un poste dans une grande entreprise il sera impérative d'utiliser un algorithme qui permet de filtrer tous les documents reçu et les classées.\\
-	Notre dataset qu'on va utiliser dans ce papier serait fournit par \texttt{Zoho\footnote{Zoho Office Suite est une suite bureautique en ligne sur le Web contenant du traitement de texte, des feuilles de calcul, des présentations, des bases de données, la prise de notes, des wikis, des conférences Web, la gestion de la relation client, la gestion de projet, la facturation et d'autres applications.}}, en premier lieu on va travailler sur ce dataset qui semble complet avec des fiches de postes et des curriculum vitæ néanmoins ce logiciel présente la fonctionnalités de correspondre une fiche de poste avec un résume sauf que le but de l'entreprise est d'abondonner ce logiciel voir le remplacer au fils des années par un produit fait maison, aussi bien que dans le cas notre dataset ne sera pas suffissant la vision de faire du scrapping sur LinkedIn n'est pas négliger.
+	Notre dataset qu'on va utiliser dans ce papier serait fournit par \texttt{Zoho\footnote{Zoho Office Suite est une suite bureautique en ligne sur le Web contenant du traitement de texte, des feuilles de calcul, des présentations, des bases de données, la prise de notes, des wikis, des conférences Web, la gestion de la relation client, la gestion de projet, la facturation et d'autres applications.}}, en premier lieu on va travailler sur ce dataset qui semble complet avec des fiches de postes et des curriculum vitæ néanmoins ce logiciel présente la fonctionnalités de correspondre une fiche de poste avec un résume sauf que le but de l'entreprise est d'abondonner ce logiciel voir le remplacer au fils des années par un produit fait maison, aussi bien que dans le cas notre dataset ne sera pas suffissant opter pour le scrapping sur LinkedIn sera une des solutions.
 	
 	\begin{figure}[h]
-		\includegraphics[width=200pt,height=150pt]{CV}
-		\includegraphics[width=200pt,height=150pt]{CV2}
+		\includegraphics[width=150pt,height=150pt]{CV}
+		\includegraphics[width=150pt,height=150pt]{CV2}
 		\caption{Une lecture structurée d'un curriculum vitæ (lecture en F)}
 	\end{figure}
 
 	Dans la figure 1.1, nous remarquons la fameuse lecture en F et çelà nous permet en premier lieu de comprendre la structure d'un curriculum vitæ.\\
-	D'où on peut déduire que la lecture d'un résume se base plutôt sur les mots clés, la plupart du temps çelà mèner à lire les postes occupées au par avant sans plonger dans les détails,la formation, et les informations du candidat.\\
+	D'où nous pouvons déduire que la lecture d'un résume se base plutôt sur les mots clés, la plupart du temps çelà mèner à lire les postes occupées au par avant sans plonger dans les détails,la formation, et les informations du candidat.\\
 	En effet, c'est tout à fait normal que les rectruteurs vont opter pour une lecture en F vu qu'ils voient des centaines de curriculum vitæ et ça devient automatique de comprendre rapidement un résume juste en identifiant les mots clés.\\
-	Pour pouvoir identifier les compétences, les langues, les expèriences... etc on a besoin tout d'abord de pouvoir trouver des mots clés sachant que le nom et prénom sont aussi des mots clés dans la figure 1.2 ci-dessous on résume le processus qu'on va adataper pour pouvoir comprendre et analyser un curriculum vitæ.\\
+	Pour pouvoir identifier les compétences, les langues, les expèriences... etc nous avons besoin tout d'abord de pouvoir trouver des mots clés sachant que le nom et prénom sont aussi des mots clés, Résumons le processus que nous allons adataper pour pouvoir comprendre et analyser un curriculum vitæ.\\
 	Notre approche vise plutôt les documents {\itshape PDF} il faudrait tout d'abord pouvoir analyser tout type de documents qui nous donnera encore plus de donner pour tester notre modèle comme {\itshape Doc}, {\itshape Docx}, {\itshape HTML} ..etc\\
-	Ensuite classifier le texte à partir de l'indentification des mots clés dans ce dernier et produire des données structuré comme le montre la figure 1.2.\\
-	Du même principe, on analyse la fiche de poste notre algorithme va essayer de faire correspondre les mots clés présent dans les deux documents.
+	Ensuite classifier le texte à partir de l'indentification des mots clés dans ce dernier et produire des données structurés.\\
+	Du même principe, nous analyserons la fiche de poste notre algorithme va essayer de faire correspondre les mots clés présent dans les deux documents.
+	Comme précisé au par avant plusieurs recherches ont était effectuées sur ce sujet, bien que plusieurs interface voit le jour, un article proposer par Patrice Darmon,Rabah Mazouzi, Otman Manad et Mehdi Bentounsi intitulé {\itshape TeamBuilder : D’un moteur de recommandation de
+	CV notés et ordonnés à l’analyse sémantique du patrimoine informationnel d’une société}.
+	
+	Le processus de séléction consiste à attribuer des scores pour toutes les compétences extraites d'un curriculum vitæ. Deux types de scores, les scores statiques sont calculés directement à partir du CV, les scores radars qui sagit plutôt d'une agrégation des plusieurs scores statiques.\cite{teambuilder}.\\
+	Comme illustre la figure ci-dessous, notre interface doit pouvoir classifier par ordre d'importance les curriculum vitæ le mieux adapter a notre fiche de poste. Nous remarquons aussi l'orientation du profil comme Data Science, Développement, Infrastructure.
 	\begin{figure}[h]
-		\includegraphics[width=350pt,height=200pt]{algo}
-		\caption{U}
-		%TODO à changer la photo sans titre et rajouter le titre
+		\includegraphics[width=350pt,height=170pt]{score}
+		\caption{Liste des CV scorés et ordonnées}
 	\end{figure}
-	Du texte ICI\\
-	Du texte ICI\\
-	Du texte ICI\\
-	Du texte ICI\\
-	Du texte ICI\\
-	Du texte ICI\\
-	Du texte ICI\\
-	Du texte ICI\\
-	Du texte ICI\\
-	Du texte ICI\\
-	Du texte ICI\\
-	Du texte ICI\\
-	Du texte ICI\\
-	Du texte ICI\\
-	Du texte ICI\\
-	Du texte ICI\\
-	Du texte ICI\\
-	Du texte ICI\\
-	Du texte ICI\\
+
 	
+	Le papier sera découper de la manière suivante, Dans la deuxième section, nous allons aborder les différents travaux réaliser au tour de ce sujet. Ensuite la troisème section nous allons détaillé l'architecture utilisée. Puis la quatrième nous allons décrire notre modèle, Pour Finir avec une dernière section qui sera réservé pour la conclusion suite a notre résultat.
 	\chapter{État de l'art}
-	Les avancées sur les processus ne cessent que d'améliorer et çelà est liée au recherches réaliser dans le domaine de l'intelligence artificiel. On remarque plusieurs entreprises emplois massivement des interfaces qui permettent d'extraire des données à partir d'un curriculum vitæ.\\
-	Ce sujet est d'actualités dans plusieurs communauté comme on constater dans l'article suivant {\itshape A Two-Step Resume Information Extraction Algorithm} \cite{greenwade93} 
-	
+	Les avancées sur les processus ne cessent que d'améliorer et çelà est liée au recherches réaliser dans le domaine de l'intelligence artificiel. Nous remarquons plusieurs entreprises emplois massivement des interfaces qui permettent d'extraire des données à partir d'un curriculum vitæ.\\
+	Ce sujet est d'actualités dans plusieurs communauté comme dans l'article suivant {\itshape A Two-Step Resume Information Extraction Algorithm\cite{ATSRIEA}}.\\
+	La classification textuelle est une étape trés importante, nous remarquons trois types de texte {\itshape simple} qui représente un texte court, {\itshape KeyValue} représenter par une clé valeur exemple Data Scientist : Safran généralement séparer par un signe de ponctuation, {\itshape Complexe } contient plusieurs ponctuations avec un long texte.
+	Aprés l'extraction de données, la similarité sera calculé sur la base de \texttt{TFIDF} et \texttt{Kmeans} montrera le cluster d'attributs ensuite ces clusters seront mis en correspondance avec l'attribut du profil.\\
+	Un curriculum vitæ est composé d'un ensemble de compétences techniques et transversales, Les ontologies par exemple : Compétences $\in$ $\left\{ Big Data, Web, IOT ...\right\}$, il sera donc indispensable de mettre en place des filtres sur plusieurs paramètres \cite{teambuilder}.
 
-
-
+	\texttt{TF-IDF}, est une méthode trés utiliser dans la fouille texte, cette dernière permet d'évaluer l'importance d'un terme contenu dans un document.
+	Le papier suivant\cite{ATSRIEA} traite la problèmatique de notre sujet en utilisant cette méthode, il présente plutôt des résultats trés satisfisante avec une présicion de 0.94 pour l'extraction de la formation, 0.914, 0.831 simultanément pour le nom de la société et la profession.\\
+	En effet, il existe plusieurs méthodes pour correspondre du texte : l'article suivant \cite{AMVLSTM} utilise \texttt{MV-LSTM} pour combiner la réprésentation basée sur la position existante avec une couche basée sur l'attention, l'objectif est de savoir plus sur les mots les plus importants et les plus informatifs en rendant plus efficace la correspondance avec d'autres texte.\\
+	\newpage
+	Les systèmes de recommandation existent en trois modes, {\itshape démarrage à chaud} recommandation et illustré par le défi Netflix\cite{LFNPC}, {\itshape démarrage à froid} autrement dit les nouveaux candidats sont à la recherche de nouveaux postes, Finalement le mode {\itshape démrrage semi-à froid} les recommandations exploitent les interactions pasées\cite{LMCFAJAM}. 
+	Plusieurs entreprises investissent dans des systèmes de recommandation de CV, suite au nombre de candidature reçu, comme Société Générale, Allianz ... etc mais les résultats de leur recherche ou plutôt les astuces utilisées reste toujours un mystère vu la concurrence présente sur ce sujet.
 	
-	\chapter{Conclusion}
-
+	Word2vec est une technique de traitement du langage naturel. L'algorithme word2vec utilise un modèle de réseau neuronal pour apprendre les associations de mots à partir d'un grand corpus de texte. Une fois formé, un tel modèle peut détecter des mots synonymes ou suggérer des mots supplémentaires pour une phrase partielle.\\
+	Dans cet article\cite{DICT}, le modèle détaille que la mise à niveau des vecteurs de Word2vec améliore la sortie des vecteurs de 13,9\%, contre -7,3\% indiquent que l'approche proposé sans mise à niveau est meilleure que les vecteurs de Word2vec modernisés.
+	Avec des tests réaliser sous un processeur \texttt{E3-1246 v3} le modèle \texttt{Dict2Vec} se montre rapide sur 50M de fichier par rapport à \texttt{Word2Vec} 15m30 contre 4m09 pour \texttt{Dict2Vec}.
 	
-	
+	Le but est réussir à évaluer la similitude entre les mots plus en particulier entre une fiche de poste et un CV, en effet trouver une évaluation de la similitude humaine des paires de mots et de la similitude cosinus du mot correspondant aux vecteurs nous suivons le même protocole utilisé par
+	Word2vec et fastText en supprimant les paires inutiles.
 	\begin{thebibliography}{1}
-
-		\bibitem{greenwade93}
-		George Greenwade.
-		\newblock The {C}omprehensive {T}ex {A}rchive {N}etwork ({CTAN}).
-		\newblock {\em TUGBoat}, 14(3):342--351, 1993.
+		\bibitem{teambuilder}
+		Patrice Darmon, Otman Manad, Rabah Mazouzi et Mehdi Bentounsi :
+		\newblock {\itshape TeamBuilder: D’un moteur de recommandation de
+		CV notés et ordonnés à l’analyse sémantique du patrimoine
+		informationnel d’une société,}
+		\newblock {\em Oct 2018}.
 		
+		\bibitem{ATSRIEA}
+		Jie Chen, Chunxia Zhang, et Zhendong Niu :
+		\newblock {\itshape A Two-Step Resume Information Extraction Algorithm,}
+		\newblock {\em Fév 2018}.
+
+		\bibitem{AMVLSTM}
+		Thiziri Belkacem, Taoufiq Dkaki, José G. Moreno, Mohand Boughanem :
+		\newblock {\itshape aMV-LSTM: an attention-based model with multiple
+			positional text matching,}
+		\newblock {\em Jan 2019}.
+		
+		\bibitem{OPMA}
+		Gilles Didier :
+		\newblock {\itshape Optimal pattern matching algorithms,}
+		\newblock {\em Mai 2016}.
+		
+		
+		\bibitem{DMCAFTBD}
+		Houda Amazal, Mohammed Ramdani, Mohamed Kissi :
+		\newblock{\itshape Distributed multi-Label classification approach for
+			textual Big Data,}
+		\newblock {\em Sep 2019}.
+		
+		\bibitem{CSR}
+		François Gonard :
+		\newblock {\itshape Cold-start recommendation : from Algorithm Portfolios
+			to Job Applicant Matching,}
+		\newblock {\em Juin 2018}.
+		
+		\bibitem{CSR}
+		Manon Ansart, Stéphane Epelbaum, Geoffroy Gagliardi, Olivier Colliot, Didier Dormont, Bruno Dubois, Harald Hampel, Stanley Durrleman :
+		\newblock {\itshape Reduction of recruitment costs in preclinical AD trials.
+			Validation of automatic pre-screening algorithm for
+			brain amyloidosis,}
+		\newblock {\em Fév 2019}.
+		
+		\bibitem{LMCFAJAM}
+		Thomas Schmitt, François Gonard, Philippe Caillou, Michèle Sebag :
+		\newblock {\itshape Language Modelling for Collaborative Filtering:
+			Application to Job Applicant Matching,}
+		\newblock {\em Déc 2017}.
+		
+		\bibitem{LFNPC}
+		R. M. Bell and Y. Koren :
+		\newblock {\itshape Lessons from the Netflix prize challenge,}
+		\newblock {\em 	ACM Sigkdd Explorations Newsletter, vol. 9, no. 2, pp. 75–79, 2007.}.
+		
+		\bibitem{DICT}
+		Julien Tissier, Christophe Gravier, Amaury Habrard
+		\newblock {\itshape Dict2vec : Learning Word Embeddings using Lexical
+			Dictionaries}
+		\newblock {\em 12 Oct 2017}.
+				
+		
+		
+
 	\end{thebibliography}
+
+	
 
 \end{document} 
